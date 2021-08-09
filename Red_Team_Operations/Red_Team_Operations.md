@@ -75,10 +75,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  - `flag3.txt : afc01ab56b50591e7dccf93122770cd2` 
     - **Exploit Used**
      - As the user michael, located the password to the MySQL Database by navigating to the `/var/www/html/wordpress`directory and viewing the `wp-config.php` file.
-      - ![wp config](Red_Team_Operations\Images\locating_my_sql_password.PNG)
-      - ![mysql database password](Red_Team_Operations\Images\mysql_database_password.PNG)
+      - ![wp config](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/locating_my_sql_password.PNG)
+      - ![mysql database password](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_database_password.PNG)
       - Logged into the MySQL database utilizing the password found. `mysql -u root   -pR@v3nSecurity`  
-       - ![mysqlcommand](Red_Team_Operations\Images\logged_into_mysql_using_password_found.PNG)
+       - ![mysqlcommand](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_into_mysql_using_password_found.PNG)
        - Revealed flag 3 logged into the mySQL database with the following commands.
         - `mysql> show databases;`
         - `mysql> use wordpress;`
