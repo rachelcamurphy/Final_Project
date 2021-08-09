@@ -73,7 +73,7 @@ The logs and alerts generated during the assessment suggest that this network is
   - **Why It Works**: Encrypts data traversing the network connection and mitigates the possibility of a man in the middle attack against the web server. 
 - Vulnerability 2: Open SSH Port 22 
   - **Patch**: Use a nonstandard port for ssh connections. For linux machines, navigate to the `/etc/ssh/ssh_config` file and modify the following line from Port 22 to Port 8022. 
- ![Nonstandard Port](change_ssh_port.png)
+ ![Nonstandard Port](https://github.com/rachelcamurphy/Final_Project/blob/main/Blue_Team_Operations/Images/change_ssh_port.PNG)
   - **Why It Works**: Attackers will actively enumerate network ports, and any internet facing SSH connections leave the network vulnerable to brute force attacks against ssh keys, and unauthorized access to the network.
 - Vulnerability 3: Weak User Passwords
   - **Mitigation**: Enforce a strong password policy. All users must install a password manager such as Last Pass and generate strong passwords for all user accounts.
