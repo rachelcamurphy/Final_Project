@@ -111,6 +111,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         ![priv esc](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/priv_esc_from_steven_to_root.PNG)
         
      - Located the final flag as the root user on target 1. 
+     
          ![flag4](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag4.txt_results.PNG)
     
 
