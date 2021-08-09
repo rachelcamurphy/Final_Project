@@ -1,2 +1,2 @@
 # Final_Project
-Red Team, Blue Team, Network Forensic Analysis
+Red Team Operations, Blue Team Operations, and Network Forensics. 
