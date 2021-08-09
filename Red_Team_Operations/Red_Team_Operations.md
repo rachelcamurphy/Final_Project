@@ -46,22 +46,22 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **Exploit Used**
         - Visited the IP address of the target `192.168.1.110` over HTTP port 80.
         
-            -![http port 80 browser](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/website_browser_1.PNG)
+            ![http port 80 browser](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/website_browser_1.PNG)
 
         - Identified a list of users for the website utilizing the WordPress Security Scanner. User steven and user michael
             - Wordpress Scanner Command: `wpscan --url http://192.168.1.110 -eu`
             
-            - ![wordpress scan](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/enumerate_users_wpscan.PNG)
+             ![wordpress scan](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/enumerate_users_wpscan.PNG)
 
 
         - Secure Shelled in as the user michael over SSH port 22.
             - `ssh michael@192.168.1.110`
             - The username and password "michael" were identical, allowing for the ssh connection. 
             
-                - ![insert image of ssh connection](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_in_as_michael_password_michael.PNG)
+                 ![insert image of ssh connection](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_in_as_michael_password_michael.PNG)
                 
             - Located `flag1.txt` in michael's `/var/www/html` file.
-                - ![insert image of flag1.PNG](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag1.PNG)
+                 ![insert image of flag1.PNG](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag1.PNG)
                 
             - Located the MySQL database password within the `wp-config.php` file in `/var/www/html` 
 
@@ -70,21 +70,21 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **Exploit Used**
       - Utilized the locate command as the user michael to find the relative path to flag2. 
       - Commands: `locate flag2` and `cat /var/www/flag2.txt`
-          - ![insert image of flag2](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag2.PNG)
+           ![insert image of flag2](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag2.PNG)
       
  - `flag3.txt : afc01ab56b50591e7dccf93122770cd2` 
     - **Exploit Used**
      - As the user michael, located the password to the MySQL Database by navigating to the `/var/www/html/wordpress`directory and viewing the `wp-config.php` file.
-      - ![wp config](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/locating_my_sql_password.PNG)
-      - ![mysql database password](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_database_password.PNG)
+       ![wp config](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/locating_my_sql_password.PNG)
+       ![mysql database password](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_database_password.PNG)
       - Logged into the MySQL database utilizing the password found. `mysql -u root   -pR@v3nSecurity`  
-       - ![mysqlcommand](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_into_mysql_using_password_found.PNG)
+       ![mysqlcommand](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_into_mysql_using_password_found.PNG)
        - Revealed flag 3 logged into the mySQL database with the following commands.
         - `mysql> show databases;`
         - `mysql> use wordpress;`
         - `mysql> show tables;`
         - `mysql> select * from wp_posts;`
-        - ![flag3](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag3.png)
+         ![flag3](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag3.png)
 
  - `flag4.txt : 715dea6c055b9fe3337544932f2941ce` 
     - **Exploit Used**
@@ -93,16 +93,16 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - `mysql> use wordpress;`
         - `mysql> show tables;`
         - `mysql> select * from wp_users;`
-        - ![mysqlshowdatabases](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_showdatabases.PNG)
+        ![mysqlshowdatabases](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_showdatabases.PNG)
         - Saved these password hashes to a text file to be cracked offline. [hashes](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/wp_hashes/wp_hashes.txt)
 
        - Cracked the user steven's password hash with john the ripper. Steven's password: Pink84.
-        - ![cracked](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/john_the_ripper_password.PNG)
+         ![cracked](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/john_the_ripper_password.PNG)
      - Logged in as the user steven via ssh utilizing the password Pink84.
      - Executed the following python script in order to escalate privileges to the root user.
-       - ![priv esc](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/priv_esc_from_steven_to_root.PNG)
+        ![priv esc](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/priv_esc_from_steven_to_root.PNG)
      - Located the final flag as the root user on target 1. 
-        - ![flag4](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag4.txt_results.PNG)
+         ![flag4](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag4.txt_results.PNG)
     
 
         
