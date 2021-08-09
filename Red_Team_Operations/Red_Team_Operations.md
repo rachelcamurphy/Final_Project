@@ -23,7 +23,9 @@ This scan identifies the services below as potential points of entry:
     - Port 111/tcp rpcbind
     - Port 139/tcp netbios/ssn
     - Port 445/tcp microsoft-ds
+    
 ![nmap scan results](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/Nmap_scan_of_target1.PNG)
+
 
 The following vulnerabilities were identified on each Target 1:
 
