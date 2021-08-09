@@ -61,7 +61,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
                  ![insert image of ssh connection](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_in_as_michael_password_michael.PNG)
                 
             - Located `flag1.txt` in michael's `/var/www/html` file.
-                 ![insert image of flag1.PNG](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag1.PNG)
+            ![insert image of flag1.PNG](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag1.PNG)
                 
             - Located the MySQL database password within the `wp-config.php` file in `/var/www/html` 
 
@@ -75,8 +75,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  - `flag3.txt : afc01ab56b50591e7dccf93122770cd2` 
     - **Exploit Used**
      - As the user michael, located the password to the MySQL Database by navigating to the `/var/www/html/wordpress`directory and viewing the `wp-config.php` file.
+
        ![wp config](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/locating_my_sql_password.PNG)
+       
        ![mysql database password](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_database_password.PNG)
+       
       - Logged into the MySQL database utilizing the password found. `mysql -u root   -pR@v3nSecurity`  
        ![mysqlcommand](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_into_mysql_using_password_found.PNG)
        - Revealed flag 3 logged into the mySQL database with the following commands.
@@ -93,14 +96,20 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - `mysql> use wordpress;`
         - `mysql> show tables;`
         - `mysql> select * from wp_users;`
+        
         ![mysqlshowdatabases](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_showdatabases.PNG)
+        
         - Saved these password hashes to a text file to be cracked offline. [hashes](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/wp_hashes/wp_hashes.txt)
 
        - Cracked the user steven's password hash with john the ripper. Steven's password: Pink84.
+       
          ![cracked](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/john_the_ripper_password.PNG)
+         
      - Logged in as the user steven via ssh utilizing the password Pink84.
      - Executed the following python script in order to escalate privileges to the root user.
+     
         ![priv esc](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/priv_esc_from_steven_to_root.PNG)
+        
      - Located the final flag as the root user on target 1. 
          ![flag4](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag4.txt_results.PNG)
     
