@@ -8,7 +8,7 @@
 - Suggestions for Going Further
 
 ### Network Topology
-![Network Diagram](Final_Project_Network_Diagram.png)
+![Network Diagram](https://github.com/rachelcamurphy/Final_Project/blob/main/Blue_Team_Operations/Images/Final_Project_Network_Diagram.PNG)
 
 The following machines were identified on the network:
 - Name of VM 1
