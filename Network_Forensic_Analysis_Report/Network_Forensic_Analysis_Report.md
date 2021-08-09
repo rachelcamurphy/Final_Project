@@ -9,7 +9,7 @@ You must inspect your traffic capture to answer the following questions:
    - Once you have found the file, export it to your Kali machine's desktop.
 4. Upload the file to [VirusTotal.com](https://www.virustotal.com/gui/). 
 5. What kind of malware is this classified as? Trojan
-![](virus_total_screenshot_day2_wireshark.png)
+![](https://github.com/rachelcamurphy/Final_Project/blob/main/Network_Forensic_Analysis_Report/Images/virus_total_screenshot_day2_wireshark.PNG)
 ---
 
 ## Vulnerable Windows Machine
@@ -21,7 +21,8 @@ You must inspect your traffic capture to answer the following questions:
     
 2. What is the username of the Windows user whose computer is infected? `username: matthijs.devries`
 3. What are the IP addresses used in the actual infection traffic? `172.16.4.205, 185.243.115.84, 166.62.11.64`
-4. As a bonus, retrieve the desktop background of the Windows host. ![](Desktop_Background_Windows_User.png)
+4. As a bonus, retrieve the desktop background of the Windows host. 
+![](https://github.com/rachelcamurphy/Final_Project/blob/main/Network_Forensic_Analysis_Report/Images/Desktop_Background_Windows_User.png)
 
 ---
 
@@ -33,4 +34,4 @@ You must inspect your traffic capture to answer the following questions:
     - OS version: `Windows NT 10.0; Win64; x64`
 
 2. Which torrent file did the user download? `Betty Boop - Rythm on the Reservation`
-    ![](bettyboop_wireshark.png)
+    ![](https://github.com/rachelcamurphy/Final_Project/blob/main/Network_Forensic_Analysis_Report/Images/bettyboop_wireshark.PNG)
