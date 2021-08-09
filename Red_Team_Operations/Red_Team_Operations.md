@@ -45,26 +45,32 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - `flag1.txt: b9bbcb33e11b80be759c4e844862482d`
     - **Exploit Used**
         - Visited the IP address of the target `192.168.1.110` over HTTP port 80.
-            -![http port 80 browser](website_browser_1.png)
+        
+            -![http port 80 browser](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/website_browser_1.PNG)
 
         - Identified a list of users for the website utilizing the WordPress Security Scanner. User steven and user michael
             - Wordpress Scanner Command: `wpscan --url http://192.168.1.110 -eu`
-            - ![wordpress scan](Red_Team_Operations\Images\enumerate_users_wpscan.PNG)
+            
+            - ![wordpress scan](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/enumerate_users_wpscan.PNG)
 
 
         - Secure Shelled in as the user michael over SSH port 22.
             - `ssh michael@192.168.1.110`
             - The username and password "michael" were identical, allowing for the ssh connection. 
-                - ![insert image of ssh connection](Red_Team_Operations\Images\logged_in_as_michael_password_michael.PNG)
+            
+                - ![insert image of ssh connection](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_in_as_michael_password_michael.PNG)
+                
             - Located `flag1.txt` in michael's `/var/www/html` file.
-                - ![insert image of flag1.PNG](Red_Team_Operations\Images\flag1.PNG)
+                - ![insert image of flag1.PNG](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag1.PNG)
+                
             - Located the MySQL database password within the `wp-config.php` file in `/var/www/html` 
 
   - `flag2.txt : fc3fd58dcdad9ab23faca6e9a36e581c`
+  
     - **Exploit Used**
       - Utilized the locate command as the user michael to find the relative path to flag2. 
       - Commands: `locate flag2` and `cat /var/www/flag2.txt`
-          - ![insert image of flag2](Red_Team_Operations\Images\flag2.PNG)
+          - ![insert image of flag2](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag2.PNG)
       
  - `flag3.txt : afc01ab56b50591e7dccf93122770cd2` 
     - **Exploit Used**
@@ -78,7 +84,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - `mysql> use wordpress;`
         - `mysql> show tables;`
         - `mysql> select * from wp_posts;`
-        - ![flag3](Red_Team_Operations\Images\flag3.png)
+        - ![flag3](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag3.png)
 
  - `flag4.txt : 715dea6c055b9fe3337544932f2941ce` 
     - **Exploit Used**
@@ -87,16 +93,16 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
         - `mysql> use wordpress;`
         - `mysql> show tables;`
         - `mysql> select * from wp_users;`
-        - ![mysqlshowdatabases](Red_Team_Operations\Images\mysql_showdatabases.PNG)
-        - Saved these password hashes to a text file to be cracked offline. [hashes](Red_Team_Operations\wp_hashes\wp_hashes.txt)
+        - ![mysqlshowdatabases](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/mysql_showdatabases.PNG)
+        - Saved these password hashes to a text file to be cracked offline. [hashes](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/wp_hashes/wp_hashes.txt)
 
        - Cracked the user steven's password hash with john the ripper. Steven's password: Pink84.
-        - ![cracked](Red_Team_Operations\Images\john-wp_hashes.txt_steven_results.PNG)
+        - ![cracked](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/john_the_ripper_password.PNG)
      - Logged in as the user steven via ssh utilizing the password Pink84.
      - Executed the following python script in order to escalate privileges to the root user.
-       - ![priv esc](Red_Team_Operations\Images\priv_esc_from_steven_to_root.PNG)
+       - ![priv esc](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/priv_esc_from_steven_to_root.PNG)
      - Located the final flag as the root user on target 1. 
-        - ![flag4](Red_Team_Operations\Images\flag4.txt_results.PNG)
+        - ![flag4]()
     
 
         
