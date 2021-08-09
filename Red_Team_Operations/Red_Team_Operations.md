@@ -69,7 +69,9 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   
     - **Exploit Used**
       - Utilized the locate command as the user michael to find the relative path to flag2. 
+      
       - Commands: `locate flag2` and `cat /var/www/flag2.txt`
+      
            ![insert image of flag2](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/flag2.PNG)
       
  - `flag3.txt : afc01ab56b50591e7dccf93122770cd2` 
