@@ -27,7 +27,7 @@ The network forensics operations included detailed inspection of network traffic
  - [Network Forensic Analysis](https://github.com/rachelcamurphy/Final_Project/tree/main/Network_Forensic_Analysis_Report) 
 
 # Offensive Security Red Team Presentation
-[Offensive Final Project Presentation-Jackson, Hope, Jordan, Rachel.pdf](https://github.com/rachelcamurphy/Final_Project/files/6958279/Offensive.Final.Project.Presentation-Jackson.Hope.Jordan.Rachel.pdf)
+[Offensive Final Project Presentation-Jackson, Hope, Jordan, Rachel](https://github.com/rachelcamurphy/Final_Project/files/6958279/Offensive.Final.Project.Presentation-Jackson.Hope.Jordan.Rachel.pdf)
  
 
 
