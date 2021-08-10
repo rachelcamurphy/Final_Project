@@ -1,5 +1,5 @@
 # Final Project
----
+
 This repository includes Red Team Operations, Blue Team Operations, and Network Forensics. All operations were conducted within Azure Labs. The Windows machine's hypervisor allowed the following network topology.
 
 ![diagram](https://github.com/rachelcamurphy/Final_Project/blob/main/Blue_Team_Operations/Images/Final_Project_Network_Diagram.PNG)
