@@ -22,9 +22,9 @@ The blue team operations included configuring the Elasticsearch, Logstash, and K
 The network forensics operations included detailed inspection of network traffic in order to identify malicious file downloads.
 
 # Detailed summaries of this project are linked below.
- - Red Team Operations
- - Blue Team Operations
- - Network Forensic Analysis
+ - [https://github.com/rachelcamurphy/Final_Project/tree/main/Red_Team_Operations](Red Team Operations)
+ - [https://github.com/rachelcamurphy/Final_Project/tree/main/Blue_Team_Operations](Blue Team Operations)
+ - [https://github.com/rachelcamurphy/Final_Project/tree/main/Network_Forensic_Analysis_Report](Network Forensic Analysis)
 
 # Offensive Security Red Team Presentation
  
