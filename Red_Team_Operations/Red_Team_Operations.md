@@ -84,7 +84,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
        
       - Logged into the MySQL database utilizing the password found. `mysql -u root   -pR@v3nSecurity`  
        ![mysqlcommand](https://github.com/rachelcamurphy/Final_Project/blob/main/Red_Team_Operations/Images/logged_into_mysql_using_password_found.PNG)
-       - Revealed flag 3 logged into the mySQL database with the following commands.
+       
+      - Revealed flag 3 logged into the mySQL database with the following commands.
         - `mysql> show databases;`
         - `mysql> use wordpress;`
         - `mysql> show tables;`
